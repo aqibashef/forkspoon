@@ -83,7 +83,7 @@ function themewagon_load_scripts() {
 	
 	// Fonts
 	wp_enqueue_style('default_body_font', 'http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&subset=latin,latin-ext');
-	wp_enqueue_style('default_heading_font', 'https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic');
+	wp_enqueue_style('default_heading_font', 'https://fonts.googleapis.com/css?family=Playfair+Display:700,700italic');
 	
 	// JS
 	wp_enqueue_script('jquery');

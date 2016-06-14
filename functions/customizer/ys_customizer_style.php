@@ -9,13 +9,13 @@ function themewagon_customizer_css() {
 		#logo { padding-top:<?php echo get_theme_mod( 'ys_header_padding_top' ); ?>px; padding-bottom:<?php echo get_theme_mod( 'ys_header_padding_bottom' ); ?>px; }
 		<?php if(get_theme_mod('ys_promo_border') == true) : ?>.promo-overlay { border:none; }<?php endif; ?>
 		
-		<?php if(get_theme_mod( 'ys_topbar_bg' )) : ?>#top-bar, .slicknav_menu { background:<?php echo get_theme_mod( 'ys_topbar_bg' ); ?>; }<?php endif; ?>
+		<?php if(get_theme_mod( 'ys_topbar_bg' )) : ?>.slicknav_menu { background:<?php echo get_theme_mod( 'ys_topbar_bg' ); ?>; }<?php endif; ?>
 		<?php if(get_theme_mod( 'ys_topbar_nav_color' )) : ?>#nav-wrapper .menu li a{ color:<?php echo get_theme_mod( 'ys_topbar_nav_color' ); ?>; }<?php endif; ?>
 		#nav-wrapper .menu li a:hover {  color:<?php echo get_theme_mod( 'ys_topbar_nav_color_hover' ); ?>; }
 		
 		#nav-wrapper .menu .sub-menu, #nav-wrapper .menu .children { background: <?php echo get_theme_mod( 'ys_drop_bg' ); ?>; }
-		#nav-wrapper ul.menu ul a, #nav-wrapper .menu ul ul a { <?php if(get_theme_mod( 'ys_drop_border' )) : ?>border-top: 1px solid <?php echo get_theme_mod( 'ys_drop_border' ); ?>;<?php endif; ?> color:<?php echo get_theme_mod( 'ys_drop_text_color' ); ?>; }
-		#nav-wrapper ul.menu ul a:hover, #nav-wrapper .menu ul ul a:hover { color: <?php echo get_theme_mod( 'ys_drop_text_hover_color' ); ?>; background:<?php echo get_theme_mod( 'ys_drop_text_hover_bg' ); ?>; }
+		#nav-wrapper ul.menu ul a, #nav-wrapper .menu ul ul a { <?php if(get_theme_mod( 'ys_drop_border' )) : ?>border-bottom: 1px solid <?php echo get_theme_mod( 'ys_drop_border' ); ?>;<?php endif; ?> color:<?php echo get_theme_mod( 'ys_drop_text_color' ); ?>; }
+		#nav-wrapper ul.menu ul a:hover, #nav-wrapper .menu ul ul a:hover { color: <?php echo get_theme_mod( 'ys_drop_text_hover_color' ); ?>; border-color: <?php echo get_theme_mod( 'ys_drop_text_hover_color' ); ?>; background:<?php echo get_theme_mod( 'ys_drop_text_hover_bg' ); ?>; }
 		
 		.slicknav_nav { background:<?php echo get_theme_mod( 'ys_mobile_bg' ); ?>; }
 		.slicknav_nav a { color:<?php echo get_theme_mod( 'ys_mobile_text' ); ?>; }

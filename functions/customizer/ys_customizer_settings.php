@@ -53,7 +53,7 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 	) );
 	
 	$wp_customize->add_section( 'themewagon_new_section_color_topbar' , array(
-   		'title'      => 'Colors: Top Bar',
+   		'title'      => 'Colors: Nav Bar',
    		'description'=> '',
    		'priority'   => 100,
 	) );
@@ -95,7 +95,7 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 	) );
 	
 	$wp_customize->add_section( 'themewagon_new_section_topbar' , array(
-		'title'      => 'Top Bar Settings',
+		'title'      => 'Nav Bar Settings',
 		'description'=> '',
 		'priority'   => 92,
 	) );
@@ -180,19 +180,19 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 		$wp_customize->add_setting(
 	        'ys_header_padding_top',
 	        array(
-	            'default'     => '56',
+	            'default'     => '0',
 	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		$wp_customize->add_setting(
 	        'ys_header_padding_bottom',
 	        array(
-	            'default'     => '56',
+	            'default'     => '0',
 	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		
-		// Top Bar
+		// Nav Bar
 		$wp_customize->add_setting(
 	        'ys_topbar_social_check',
 	        array(
@@ -529,7 +529,7 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 			$wp_customize->add_setting(
 				'ys_topbar_nav_color',
 				array(
-					'default'     => '#ffffff',
+					'default'     => '#222',
 					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
@@ -544,35 +544,35 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 			$wp_customize->add_setting(
 				'ys_drop_bg',
 				array(
-					'default'     => '#161616',
+					'default'     => '#ffffff',
 					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			$wp_customize->add_setting(
 				'ys_drop_border',
 				array(
-					'default'     => '#333333',
+					'default'     => '#dadada',
 					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			$wp_customize->add_setting(
 				'ys_drop_text_color',
 				array(
-					'default'     => '#999999',
+					'default'     => '#000',
 					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			$wp_customize->add_setting(
 				'ys_drop_text_hover_bg',
 				array(
-					'default'     => '#333333',
+					'default'     => '#fff',
 					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			$wp_customize->add_setting(
 				'ys_drop_text_hover_color',
 				array(
-					'default'     => '#ffffff',
+					'default'     => '#333',
 					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
@@ -580,14 +580,14 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 			$wp_customize->add_setting(
 				'ys_topbar_social_color',
 				array(
-					'default'     => '#ffffff',
+					'default'     => '#161616',
 					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			$wp_customize->add_setting(
 				'ys_topbar_social_color_hover',
 				array(
-					'default'     => '#C39F76',
+					'default'     => '#87b331',
 					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
@@ -655,7 +655,7 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 			$wp_customize->add_setting(
 				'ys_sidebar_social_icon_hover',
 				array(
-					'default'     => '#C39F76',
+					'default'     => '#87b331',
 					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
@@ -690,7 +690,7 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 			$wp_customize->add_setting(
 				'ys_sidebar_newsletter_button_bg_hover',
 				array(
-					'default'     => '#C39F76',
+					'default'     => '#87b331',
 					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
@@ -720,7 +720,7 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 			$wp_customize->add_setting(
 				'ys_footer_social_hover',
 				array(
-					'default'     => '#C39F76',
+					'default'     => '#87b331',
 					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
@@ -785,21 +785,21 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 			$wp_customize->add_setting(
 				'ys_post_readmore_text_hover',
 				array(
-					'default'     => '#C39F76',
+					'default'     => '#87b331',
 					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			$wp_customize->add_setting(
 				'ys_post_readmore_line',
 				array(
-					'default'     => '#C39F76',
+					'default'     => '#87b331',
 					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			$wp_customize->add_setting(
 				'ys_post_readmore_line_hover',
 				array(
-					'default'     => '#C39F76',
+					'default'     => '#87b331',
 					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
@@ -813,7 +813,7 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 			$wp_customize->add_setting(
 				'ys_post_share_color_hover',
 				array(
-					'default'     => '#C39F76',
+					'default'     => '#87b331',
 					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
@@ -822,7 +822,7 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 			$wp_customize->add_setting(
 				'ys_accent_color',
 				array(
-					'default'     => '#C39F76',
+					'default'     => '#87b331',
 					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
@@ -994,13 +994,13 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 			)
 		);
 		
-		// Top Bar
+		// Nav Bar
 		$wp_customize->add_control(
 			new WP_Customize_Control(
 				$wp_customize,
 				'topbar_social_check',
 				array(
-					'label'      => 'Disable Top Bar Social Icons',
+					'label'      => 'Disable Nav Bar Social Icons',
 					'section'    => 'themewagon_new_section_topbar',
 					'settings'   => 'ys_topbar_social_check',
 					'type'		 => 'checkbox',
@@ -1013,7 +1013,7 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 				$wp_customize,
 				'topbar_search_check',
 				array(
-					'label'      => 'Disable Top Bar Search',
+					'label'      => 'Disable Nav Bar Search',
 					'section'    => 'themewagon_new_section_topbar',
 					'settings'   => 'ys_topbar_search_check',
 					'type'		 => 'checkbox',
@@ -1577,7 +1577,7 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 					$wp_customize,
 					'topbar_bg',
 					array(
-						'label'      => 'Top Bar BG',
+						'label'      => 'Nav Bar BG',
 						'section'    => 'themewagon_new_section_color_topbar',
 						'settings'   => 'ys_topbar_bg',
 						'priority'	 => 1
@@ -1590,7 +1590,7 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 					$wp_customize,
 					'topbar_nav_color',
 					array(
-						'label'      => 'Top Bar Menu Text Color',
+						'label'      => 'Nav Bar Menu Text Color',
 						'section'    => 'themewagon_new_section_color_topbar',
 						'settings'   => 'ys_topbar_nav_color',
 						'priority'	 => 2
@@ -1602,7 +1602,7 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 					$wp_customize,
 					'topbar_nav_color_hover',
 					array(
-						'label'      => 'Top Bar Menu Text Hover Color',
+						'label'      => 'Nav Bar Menu Text Hover Color',
 						'section'    => 'themewagon_new_section_color_topbar',
 						'settings'   => 'ys_topbar_nav_color_hover',
 						'priority'	 => 3
@@ -1677,7 +1677,7 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 					$wp_customize,
 					'topbar_social_color',
 					array(
-						'label'      => 'Top Bar Social Icons',
+						'label'      => 'Nav Bar Social Icons',
 						'section'    => 'themewagon_new_section_color_topbar',
 						'settings'   => 'ys_topbar_social_color',
 						'priority'	 => 9
@@ -1689,7 +1689,7 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 					$wp_customize,
 					'topbar_social_color_hover',
 					array(
-						'label'      => 'Top Bar Social Icons Hover',
+						'label'      => 'Nav Bar Social Icons Hover',
 						'section'    => 'themewagon_new_section_color_topbar',
 						'settings'   => 'ys_topbar_social_color_hover',
 						'priority'	 => 11
@@ -1701,7 +1701,7 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 					$wp_customize,
 					'topbar_search_magnify',
 					array(
-						'label'      => 'Top Bar Search Magnify Color',
+						'label'      => 'Nav Bar Search Magnify Color',
 						'section'    => 'themewagon_new_section_color_topbar',
 						'settings'   => 'ys_topbar_search_magnify',
 						'priority'	 => 13

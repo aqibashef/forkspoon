@@ -17,11 +17,18 @@ strong { font-weight: bold }
 em { font-style: italic }
 a img { border:none }
 *{outline: none;}
+
+@media (min-width: 1200px){
+	.container {
+	    width: 980px;
+	}
+}
+
 /**/
 
 
 body {
-	font-family: 'Droid Serif', serif;
+	font-family: Gorgia, serif;
 	font-size:14px;
 	color:#242424;
 	background:#fff;
@@ -30,7 +37,7 @@ body {
 h1,h2,h3,h4,h5,h6, #nav-wrapper .menu li a, .feat-more, .cat, .post-share .post-share-comments,
 .about-title, #footer-social a, .more-link, .post-comments span.reply a, .widget .tagcloud a,
 .pagination a , .post-tags a, .slicknav_nav a  {
-	font-family: 'Lato', sans-serif;
+	font-family: 'Playfair Display', serif;
 }
 
 p {
@@ -38,7 +45,7 @@ p {
 }
 
 a {
-	color:#C39F76;
+	color:#87b331;
 	text-decoration:none;
 }
 
@@ -58,18 +65,18 @@ a {
 
 
 /****************************************/
-/* Top Bar
+/* Nav Bar
 /****************************************/
 
-#top-bar {
+#nav-bar {
 	height:50px;
-	background:#00243b;
 	width:100%;
-	position:fixed;
-	z-index:9999;
+	margin-bottom: 50px;
 	-webkit-backface-visibility: hidden;
+	position: relative;
+	z-index: 999;
 }
-#top-bar .container {
+#nav-bar .container {
 	position:relative;
 }
 
@@ -81,6 +88,18 @@ a {
 #nav-wrapper .menu {
 	float:left;
 	padding: 0;
+	margin-bottom: 0;
+	padding-left: 30px;
+}
+
+#nav-wrapper {
+    border-bottom: 2px solid;
+    border-top: 2px solid;
+}
+
+#nav-wrapper .menu ul {
+    margin-bottom: 0;
+    padding-left: 30px;
 }
 #nav-wrapper .menu li {
 	display:inline-block;
@@ -88,8 +107,8 @@ a {
 	position:relative;
 }
 #nav-wrapper .menu li a {
-	color:#fff;
-	line-height:50px;
+	color: #000;
+	line-height: 36px;
 	font-size:11px;
 	font-weight:700;
 	letter-spacing:2px;
@@ -107,7 +126,7 @@ a {
     position: relative;
     top: 2px;
 }
-#nav-wrapper .menu li a:hover,Â #nav-wrapper .menu li a:focus {
+#nav-wrapper .menu li a:hover,Ã‚Â #nav-wrapper .menu li a:focus {
 	color:#999;
 	outline: none;
 }
@@ -126,33 +145,36 @@ a {
 	/* Dropdown **********/
 	#nav-wrapper .menu .sub-menu,
 	#nav-wrapper .menu .children {
-		background-color: #00243b;
+		background-color: #ffffff;
 		display: none;
-		padding: 0;
+		padding: 0 10px 0 10px;
 		position: absolute;
-		margin-top:0;
+		margin-top: 0px;
 		left: 0;
 		z-index: 99999;
-		
+		border: 2px solid;
 	}
 	
 	#nav-wrapper ul.menu ul a,
 	#nav-wrapper .menu ul ul a {
-		color: #999;
+		color: #000;
 		margin: 0;
 		font-size:10px;
 		letter-spacing:1px;
-		padding: 6px 10px;
-		min-width: 200px;
+		padding: 10px 10px;
+		min-width: 160px;
 		line-height:20px;
 		-o-transition:.25s;
 		-ms-transition:.25s;
 		-moz-transition:.25s;
 		-webkit-transition:.25s;
 		transition:.25s;
-		border-top:1px solid;
-		border-color:#333;
+		border-bottom: 1px solid #dadada;
 	}
+
+#nav-wrapper ul.menu ul li:last-child a {
+    border-bottom: none;
+}
 	
 	#nav-wrapper ul.menu ul li,
 	#nav-wrapper .menu ul ul li {
@@ -162,8 +184,8 @@ a {
 
 	#nav-wrapper ul.menu ul a:hover,
 	#nav-wrapper .menu ul ul a:hover {
-		color: #fff;
-		background:#333;
+		color: #333;
+		border-color: #333;
 		text-decoration: none;
 		padding-left: 16px;
 	}
@@ -174,24 +196,23 @@ a {
 	}
 	
 	#nav-wrapper .menu .sub-menu ul,
-	#nav-wrapper .menu .children ul {	
+	#nav-wrapper .menu .children ul {
 		left: 100%;
-		top: 0;
-		
+		top: 2px;
 	}
 	
 /* Social and Search **********/
 #top-social {
 	position:absolute;
-	right: 52px;
+	right: 60px;
 	top:0;
 }
 #top-social.nosearch { right:0; }
 #top-social a {
-	color:#fff;
-	margin-left:10px;
+	color: #161616;
+	padding: 0 10px;
 	font-size:14px;
-	line-height:50px;
+	line-height: 40px;
 	display:inline-block;
 	-o-transition:.25s;
 	-ms-transition:.25s;
@@ -200,19 +221,19 @@ a {
 	transition:.25s;
 }
 #top-social a:hover {
-	color:#C39F76;
+	color:#87b331;
 }
 
 #top-search {
 	position:absolute;
-	right: 15px;
-	top:0;
+	right: 35px;
+	top: 0px;
 }
 
 #top-search a.search {
 	font-size:14px;
 	color:#888;
-	line-height:50px;
+	line-height: 38px;
 	position:relative;
 	-o-transition:.25s;
 	-ms-transition:.25s;
@@ -250,14 +271,11 @@ a {
 	border-bottom:none;
 }
 #header, #header.noslider {
-	padding-top:50px;
 	text-align:center;
-	border-bottom:1px solid #eee;
-	margin-bottom:60px;
 }
 #logo {
-	padding-top:56px;
-	padding-bottom:56px;
+	padding-top: 0;
+	padding-bottom: 0;
 }
 #logo img {
 	max-width:100%;
@@ -469,15 +487,12 @@ ul.sp-grid > li:nth-child(odd) {
 .post-header h2, .post-header h1 {
 	margin-bottom:10px;
 	display: block;
-	max-width:80%;
 }
 .post-header h2 a, .post-header h1 {
-	font-size:24px;
-	letter-spacing: 2px;
-	text-transform:uppercase;
+	font-size: 3rem;
+	line-height: 1.2;
 	color:#000;
 	font-weight: 700;
-	line-height:1.4em;
 	-o-transition:.25s;
 	-ms-transition:.25s;
 	-moz-transition:.25s;
@@ -629,7 +644,7 @@ p.lead:first-letter {
 
 a.more-link:hover {
 	text-decoration:none;
-	color:#C39F76;
+	color:#87b331;
 }
 
 .more-line {
@@ -637,7 +652,7 @@ a.more-link:hover {
 	display: block;
 	max-width: 40px;
 	margin: 5px auto 15px;
-	color: #C39F76;
+	color: #87b331;
 	-o-transition:.3s;
 	-ms-transition:.3s;
 	-moz-transition:.3s;
@@ -645,7 +660,7 @@ a.more-link:hover {
 	transition:.3s;
 }
 .more-link:hover > .more-line {
-	color:#C39F76;
+	color:#87b331;
 }
 
 /* Post Share **********/
@@ -860,7 +875,7 @@ a.more-link:hover {
 
 .grid-item .post-header h2 a {
 	font-size:18px;
-	letter-spacing:2px;
+	letter-spacing: 0px;
 }
 .grid-item .post-header h2 {
 	margin-bottom:12px;
@@ -1212,7 +1227,7 @@ a.more-link:hover {
 	transition:.3s;
 }
 .social-widget a:hover {
-	color:#C39F76;
+	color:#87b331;
 }
 
 /* Widget categories & Archive **********/
@@ -1482,7 +1497,7 @@ a.more-link:hover {
 	transition:.3s;
 }
 #footer-social a:hover {
-	color:#C39F76;
+	color:#87b331;
 	text-decoration: none;
 }
 #footer-social a span {
@@ -1756,7 +1771,7 @@ div.wpcf7 {
 	transition:.3s;
 }
 .mc4wp-form button:hover, .mc4wp-form input[type=button]:hover, .mc4wp-form input[type=submit]:hover {
-	background:#C39F76;
+	background:#87b331;
 }
 
 .mc4wp-form input[type=date], .mc4wp-form input[type=email], .mc4wp-form input[type=tel], .mc4wp-form input[type=text], .mc4wp-form input[type=url], .mc4wp-form select, .mc4wp-form textarea {
@@ -1801,14 +1816,14 @@ div.wpcf7 {
 .slicknav_menu { *zoom: 1 }
 .slicknav_btn {
     margin: 5px 5px 6px;
-	margin-left:0;
+    margin-left: 10px;
 }
 .slicknav_menu .slicknav_icon-bar {
   background-color: #fff;
 }
 .slicknav_menu {
     background:#00243b;
-    padding:6px;
+    padding: 0px;
 }
 .slicknav_nav {
     margin:0;

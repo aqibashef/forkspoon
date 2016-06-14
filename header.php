@@ -20,12 +20,42 @@
 </head>
 
 <body <?php body_class(); ?>>
-
-	<div id="top-bar">
+	
+	<header id="header" <?php if(!get_theme_mod('ys_featured_slider')) : ?>class="noslider"<?php endif; ?>>
 		
 		<div class="container">
 			
-			<div id="nav-wrapper">
+			<div id="logo">
+				
+				<?php if(!get_theme_mod('ys_logo')) : ?>
+					
+					<?php if(is_front_page()) : ?>
+						<h1><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="<?php bloginfo( 'name' ); ?>" /></a></h1>
+					<?php else : ?>
+						<h2><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="<?php bloginfo( 'name' ); ?>" /></a></h2>
+					<?php endif; ?>
+					
+				<?php else : ?>
+					
+					<?php if(is_front_page()) : ?>
+						<h1><a href="<?php echo home_url(); ?>"><img src="<?php echo esc_url(get_theme_mod('ys_logo')); ?>" alt="<?php bloginfo( 'name' ); ?>" /></a></h1>
+					<?php else : ?>
+						<h2><a href="<?php echo home_url(); ?>"><img src="<?php echo esc_url(get_theme_mod('ys_logo')); ?>" alt="<?php bloginfo( 'name' ); ?>" /></a></h2>
+					<?php endif; ?>
+					
+				<?php endif; ?>
+				
+			</div>
+			
+		</div>
+		
+	</header>
+
+	<div id="nav-bar">
+		
+		<div class="container">
+			
+			<div id="nav-wrapper" class="clearfix">
 				<?php wp_nav_menu( array( 'container' => false, 'theme_location' => 'main-menu', 'menu_class' => 'menu' ) ); ?>
 			</div>
 			
@@ -62,34 +92,4 @@
 			
 		</div><!--/container-->
 		
-	</div><!--/top-bar-->
-	
-	<header id="header" <?php if(!get_theme_mod('ys_featured_slider')) : ?>class="noslider"<?php endif; ?>>
-		
-		<div class="container">
-			
-			<div id="logo">
-				
-				<?php if(!get_theme_mod('ys_logo')) : ?>
-					
-					<?php if(is_front_page()) : ?>
-						<h1><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="<?php bloginfo( 'name' ); ?>" /></a></h1>
-					<?php else : ?>
-						<h2><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="<?php bloginfo( 'name' ); ?>" /></a></h2>
-					<?php endif; ?>
-					
-				<?php else : ?>
-					
-					<?php if(is_front_page()) : ?>
-						<h1><a href="<?php echo home_url(); ?>"><img src="<?php echo esc_url(get_theme_mod('ys_logo')); ?>" alt="<?php bloginfo( 'name' ); ?>" /></a></h1>
-					<?php else : ?>
-						<h2><a href="<?php echo home_url(); ?>"><img src="<?php echo esc_url(get_theme_mod('ys_logo')); ?>" alt="<?php bloginfo( 'name' ); ?>" /></a></h2>
-					<?php endif; ?>
-					
-				<?php endif; ?>
-				
-			</div>
-			
-		</div>
-		
-	</header>
+	</div><!--/nav-bar-->
