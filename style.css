@@ -137,7 +137,7 @@ a {
     position: relative;
     top: 2px;
 }
-#nav-wrapper .menu li a:hover,Ãƒâ€šÃ‚Â #nav-wrapper .menu li a:focus {
+#nav-wrapper .menu li a:hover,ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â #nav-wrapper .menu li a:focus {
 	color:#999;
 	outline: none;
 }
@@ -328,9 +328,8 @@ ul.bxslider {
 	transition:.3s;
 }
 .feat-inner {
-	max-width:60%;
 	margin: 0;
-	padding: 60px;
+	padding: 26px;
 }
 .feat-inner .cat {
     margin-bottom: -12px;
@@ -344,15 +343,15 @@ ul.bxslider {
 	text-transform:uppercase;
 	letter-spacing:2px;
 	padding-bottom:2px;
+	font-family: 'Function', sans-serif;
 }
 
 .feat-overlay h2 {
 	color:#fff;
 	font-size:24px;
-	line-height: 1.4em;
+	line-height: 1.1em;
 	font-weight:700;
-	text-transform:uppercase;
-	letter-spacing:3px;
+	letter-spacing: 1px;
 	margin-bottom:16px;
 	margin-top: 0;
 }
@@ -378,7 +377,7 @@ ul.bxslider {
 	-moz-transition:.25s;
 	-webkit-transition:.25s;
 	transition:.25s;
-
+	font-family: 'Function', sans-serif;
 }
 .feat-more:hover {
 	background:#fff;

@@ -12,10 +12,13 @@ jQuery(document).ready(function($) {
 	// BXslider
 	$('.featured-area .bxslider').bxSlider({
 		pager: false,
-		mode: 'fade',
 		auto: true,
 		pause: 7000,
 		speed: 800,
+		minSlides: 3,
+  		maxSlides: 3,
+  		slideWidth: 360,
+  		slideMargin: 10,
 		easing: 'ease-in-out',
 		nextText: '<i class="fa fa-angle-right"></i>',
 		prevText: '<i class="fa fa-angle-left"></i>',

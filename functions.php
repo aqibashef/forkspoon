@@ -45,7 +45,6 @@ if ( !function_exists('themewagon_theme_setup') ) {
 		// Featured image
 		add_theme_support( 'post-thumbnails' );
 		add_image_size( 'full-thumb', 1080, 0, true );
-		add_image_size( 'slider-thumb', 1080, 530, true );
 		add_image_size( 'misc-thumb', 520, 400, true );
 		
 		// Feed Links
