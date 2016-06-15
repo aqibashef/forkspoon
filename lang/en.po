@@ -341,7 +341,7 @@ msgstr ""
 msgid "All plugins installed and activated successfully. %s"
 msgstr ""
 
-#: functions/customizer/ys_custom_controller.php:45
+#: functions/customizer/fs_custom_controller.php:45
 msgid "&mdash; Select &mdash;"
 msgstr ""
 

@@ -65,7 +65,7 @@ function themewagon_load_scripts() {
 
 	// Register scripts and styles
 	wp_register_style('bootstrap', get_stylesheet_directory_uri() . '/lib/bootstrap/css/bootstrap.min.css');
-	wp_register_style('ys_style', get_stylesheet_directory_uri() . '/style.css');
+	wp_register_style('fs_style', get_stylesheet_directory_uri() . '/style.css');
 	wp_register_style('fontawesome-css', get_template_directory_uri() . '/css/font-awesome.min.css');
 	wp_register_style('bxslider-css', get_template_directory_uri() . '/css/jquery.bxslider.css');
 	wp_register_style('responsive', get_template_directory_uri() . '/css/responsive.css');
@@ -73,11 +73,11 @@ function themewagon_load_scripts() {
 	wp_register_script('slicknav', get_template_directory_uri() . '/js/jquery.slicknav.min.js', 'jquery', '', true);
 	wp_register_script('bxslider', get_template_directory_uri() . '/js/jquery.bxslider.min.js', 'jquery', '', true);
 	wp_register_script('fitvids', get_template_directory_uri() . '/js/fitvids.js', 'jquery', '', true);
-	wp_register_script('ys_scripts', get_template_directory_uri() . '/js/main.js', 'jquery', '', true);
+	wp_register_script('fs_scripts', get_template_directory_uri() . '/js/main.js', 'jquery', '', true);
 	
 	// Enqueue scripts and styles
 	wp_enqueue_style('bootstrap');
-	wp_enqueue_style('ys_style');
+	wp_enqueue_style('fs_style');
 	wp_enqueue_style('fontawesome-css');
 	wp_enqueue_style('bxslider-css');
 	
@@ -90,7 +90,7 @@ function themewagon_load_scripts() {
 	wp_enqueue_script('slicknav');
 	wp_enqueue_script('bxslider');
 	wp_enqueue_script('fitvids');
-	wp_enqueue_script('ys_scripts');
+	wp_enqueue_script('fs_scripts');
 	
 	if (is_singular() && get_option('thread_comments'))	wp_enqueue_script('comment-reply');
 	
@@ -101,9 +101,9 @@ function themewagon_load_scripts() {
 //////////////////////////////////////////////////////////////////
 
 // Theme Options
-include('functions/customizer/ys_custom_controller.php');
-include('functions/customizer/ys_customizer_settings.php');
-include('functions/customizer/ys_customizer_style.php');
+include('functions/customizer/fs_custom_controller.php');
+include('functions/customizer/fs_customizer_settings.php');
+include('functions/customizer/fs_customizer_style.php');
 
 // Widgets
 include("inc/widgets/about_widget.php");
@@ -265,7 +265,7 @@ function custom_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
-function ys_string_limit_words($string, $word_limit)
+function fs_string_limit_words($string, $word_limit)
 {
 	$words = explode(' ', $string, ($word_limit + 1));
 	
@@ -424,17 +424,17 @@ function my_theme_register_required_plugins() {
 
 //Demo only functions
 if (isset($_GET['sidebar'])) {
-	set_theme_mod('ys_sidebar_homepage', true);
-	set_theme_mod('ys_sidebar_post', true);
+	set_theme_mod('fs_sidebar_homepage', true);
+	set_theme_mod('fs_sidebar_post', true);
 }
 else{
-	set_theme_mod('ys_sidebar_homepage', false);
-	set_theme_mod('ys_sidebar_post', false);
+	set_theme_mod('fs_sidebar_homepage', false);
+	set_theme_mod('fs_sidebar_post', false);
 }
 
 if (isset($_GET['home_layout'])) {
-	set_theme_mod('ys_home_layout', $_GET['home_layout']);
+	set_theme_mod('fs_home_layout', $_GET['home_layout']);
 }
 else{
-	set_theme_mod('ys_home_layout', 'full_grid');
+	set_theme_mod('fs_home_layout', 'full_grid');
 }
