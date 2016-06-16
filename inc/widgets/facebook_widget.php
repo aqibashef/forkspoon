@@ -15,10 +15,11 @@ class themewagon_facebook_widget extends WP_Widget {
 	 * Sets up the widgets name etc
 	 */
 	public function __construct() {
-		/* Widget settings. */
-		$widget_ops = array( 'classname' => 'themewagon_facebook_widget', 'description' => __('A widget that displays a Facebook Like Box', 'forkspoon') );
-
-		parent::__construct( 'forkspoon', 'Forkspoon: Facebook Like Box', $widget_ops );
+		parent::__construct(
+			'facebook_widget', // Base ID
+			__( 'Forkspoon: Facebook Like Box', 'forkspoon' ), // Name
+			array( 'description' => __( 'A widget that displays a Facebook Like Box', 'forkspoon' ), ) // Args
+		);
 	}
 
 	/**

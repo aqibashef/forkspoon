@@ -14,12 +14,15 @@ class themewagon_social_widget extends WP_Widget {
 	/**
 	 * Sets up the widgets name etc
 	 */
+
 	public function __construct() {
-		/* Widget settings. */
-		$widget_ops = array( 'classname' => 'themewagon_social_widget', 'description' => __('A widget that displays your social icons', 'forkspoon') );
-		
-		parent::__construct( 'forkspoon', 'Forkspoon: Social Icons', $widget_ops );
+		parent::__construct(
+			'social_widget', // Base ID
+			__( 'Forkspoon: Social Icons', 'forkspoon' ), // Name
+			array( 'description' => __( 'A widget that displays your social icons', 'forkspoon' ), ) // Args
+		);
 	}
+
 
 	/**
 	 * How to display the widget on the screen.

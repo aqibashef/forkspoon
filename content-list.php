@@ -20,8 +20,6 @@
 				<h2><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h2>
 			<?php endif; ?>
 			
-			<span class="list-title-divider"></span>
-			
 		</div>
 		
 		<div class="post-entry">

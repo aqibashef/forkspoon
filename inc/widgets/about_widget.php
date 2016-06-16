@@ -15,10 +15,11 @@ class themewagon_about_widget extends WP_Widget {
 	 * Sets up the widgets name etc
 	 */
 	public function __construct() {
-		/* Widget settings. */
-		$widget_ops = array( 'classname' => 'themewagon_about_widget', 'description' => __('An About Me Widget', 'forkspoon') );
-
-		parent::__construct( 'forkspoon', 'Forkspoon: About Me', $widget_ops );
+		parent::__construct(
+			'about_widget', // Base ID
+			__( 'Forkspoon: About Me', 'forkspoon' ), // Name
+			array( 'description' => __( 'An About Me Widget', 'forkspoon' ), ) // Args
+		);
 	}
 
 	/**

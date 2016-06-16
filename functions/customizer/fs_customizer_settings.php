@@ -361,13 +361,6 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 	        )
 	    );
 		$wp_customize->add_setting(
-	        'fs_post_comment_link',
-	        array(
-	            'default'     => false,
-	            'sanitize_callback' => 'esc_url_raw'
-	        )
-	    );
-		$wp_customize->add_setting(
 	        'fs_post_thumb',
 	        array(
 	            'default'     => false,
@@ -804,13 +797,6 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 				)
 			);
 			$wp_customize->add_setting(
-				'fs_post_share_color',
-				array(
-					'default'     => '#000000',
-					'sanitize_callback' => 'esc_url_raw'
-				)
-			);
-			$wp_customize->add_setting(
 				'fs_post_share_color_hover',
 				array(
 					'default'     => '#87b331',
@@ -1073,152 +1059,6 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 					'settings'   => 'fs_featured_slider_slides',
 					'type'		 => 'number',
 					'priority'	 => 5
-				)
-			)
-		);
-		
-		// Promo Boxes
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'promo',
-				array(
-					'label'      => 'Enable Promo Boxes',
-					'section'    => 'themewagon_new_section_promo',
-					'settings'   => 'fs_promo',
-					'type'		 => 'checkbox',
-					'priority'	 => 1
-				)
-			)
-		);
-		
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'promo_border',
-				array(
-					'label'      => 'Hide White Border',
-					'section'    => 'themewagon_new_section_promo',
-					'settings'   => 'fs_promo_border',
-					'type'		 => 'checkbox',
-					'priority'	 => 2
-				)
-			)
-		);
-		
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'promo1_title',
-				array(
-					'label'      => 'Promo Box #1 Title',
-					'section'    => 'themewagon_new_section_promo',
-					'settings'   => 'fs_promo1_title',
-					'type'		 => 'text',
-					'priority'	 => 3
-				)
-			)
-		);
-		$wp_customize->add_control(
-			new WP_Customize_Image_Control(
-				$wp_customize,
-				'promo1_image',
-				array(
-					'label'      => 'Promo Box #1 Image',
-					'section'    => 'themewagon_new_section_promo',
-					'settings'   => 'fs_promo1_image',
-					'priority'	 => 4
-				)
-			)
-		);
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'promo1_url',
-				array(
-					'label'      => 'Promo Box #1 URL',
-					'section'    => 'themewagon_new_section_promo',
-					'settings'   => 'fs_promo1_url',
-					'type'		 => 'text',
-					'priority'	 => 5
-				)
-			)
-		);
-		
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'promo2_title',
-				array(
-					'label'      => 'Promo Box #2 Title',
-					'section'    => 'themewagon_new_section_promo',
-					'settings'   => 'fs_promo2_title',
-					'type'		 => 'text',
-					'priority'	 => 6
-				)
-			)
-		);
-		$wp_customize->add_control(
-			new WP_Customize_Image_Control(
-				$wp_customize,
-				'promo2_image',
-				array(
-					'label'      => 'Promo Box #2 Image',
-					'section'    => 'themewagon_new_section_promo',
-					'settings'   => 'fs_promo2_image',
-					'priority'	 => 7
-				)
-			)
-		);
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'promo2_url',
-				array(
-					'label'      => 'Promo Box #2 URL',
-					'section'    => 'themewagon_new_section_promo',
-					'settings'   => 'fs_promo2_url',
-					'type'		 => 'text',
-					'priority'	 => 8
-				)
-			)
-		);
-		
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'promo3_title',
-				array(
-					'label'      => 'Promo Box #3 Title',
-					'section'    => 'themewagon_new_section_promo',
-					'settings'   => 'fs_promo3_title',
-					'type'		 => 'text',
-					'priority'	 => 9
-				)
-			)
-		);
-		$wp_customize->add_control(
-			new WP_Customize_Image_Control(
-				$wp_customize,
-				'promo3_image',
-				array(
-					'label'      => 'Promo Box #3 Image',
-					'section'    => 'themewagon_new_section_promo',
-					'settings'   => 'fs_promo3_image',
-					'priority'	 => 10
-				)
-			)
-		);
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'promo3_url',
-				array(
-					'label'      => 'Promo Box #3 URL',
-					'section'    => 'themewagon_new_section_promo',
-					'settings'   => 'fs_promo3_url',
-					'type'		 => 'text',
-					'priority'	 => 11
 				)
 			)
 		);
@@ -1966,18 +1806,6 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 						'section'    => 'themewagon_new_section_color_post_color',
 						'settings'   => 'fs_post_title',
 						'priority'	 => 1
-					)
-				)
-			);
-			$wp_customize->add_control(
-				new WP_Customize_Color_Control(
-					$wp_customize,
-					'post_title_divider',
-					array(
-						'label'      => 'Post Title Divider Color',
-						'section'    => 'themewagon_new_section_color_post_color',
-						'settings'   => 'fs_post_title_divider',
-						'priority'	 => 2
 					)
 				)
 			);

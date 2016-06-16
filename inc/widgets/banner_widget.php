@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: About Widget
+ * Plugin Name: Banner Widget
  */
 
 add_action( 'widgets_init', 'themewagon_banner_load_widget' );
@@ -14,11 +14,13 @@ class themewagon_banner_widget extends WP_Widget {
 	/**
 	 * Sets up the widgets name etc
 	 */
-	public function __construct() {
-		/* Widget settings. */
-		$widget_ops = array( 'classname' => 'themewagon_banner_widget', 'description' => __('An Banner Widget', 'forkspoon') );
 
-		parent::__construct( 'forkspoon', 'Forkspoon: Banner', $widget_ops );
+	public function __construct() {
+		parent::__construct(
+			'banner_widget', // Base ID
+			__( 'Forkspoon: Banner', 'forkspoon' ), // Name
+			array( 'description' => __( 'A Widget to dispay Add banners', 'forkspoon' ), ) // Args
+		);
 	}
 
 	/**

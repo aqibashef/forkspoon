@@ -14,12 +14,15 @@ class themewagon_latest_news_widget extends WP_Widget {
 	/**
 	 * Sets up the widgets name etc
 	 */
-	public function __construct() {
-		/* Widget settings. */
-		$widget_ops = array( 'classname' => 'themewagon_latest_news_widget', 'description' => __('A widget that displays your latest posts from all categories or a certain', 'forkspoon') );
 
-		parent::__construct( 'forkspoon', 'Forkspoon: Latest Posts', $widget_ops );
+	public function __construct() {
+		parent::__construct(
+			'latest_news_widget', // Base ID
+			__( 'Forkspoon: Latest Posts', 'forkspoon' ), // Name
+			array( 'description' => __( 'A widget that displays your latest posts from all categories or a certain', 'forkspoon' ), ) // Args
+		);
 	}
+
 
 	/**
 	 * How to display the widget on the screen.

@@ -15,10 +15,11 @@ jQuery(document).ready(function($) {
 		auto: true,
 		pause: 7000,
 		speed: 800,
-		minSlides: 3,
+		minSlides: 1,
   		maxSlides: 3,
-  		slideWidth: 360,
+  		slideWidth: 310,
   		slideMargin: 10,
+  		adaptiveHeight: true,
 		easing: 'ease-in-out',
 		nextText: '<i class="fa fa-angle-right"></i>',
 		prevText: '<i class="fa fa-angle-left"></i>',
@@ -43,7 +44,8 @@ jQuery(document).ready(function($) {
 	
 	$('#top-search a').on('click', function ( e ) {
 		e.preventDefault();
-    	$('.show-search').slideToggle('fast');
+    	$('.show-search').toggleClass('search-open');
+    	$(this).parent().find('#searchform > input').focus();
     });
 	
 	// Fitvids

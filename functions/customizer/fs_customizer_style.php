@@ -39,7 +39,6 @@ function themewagon_customizer_css() {
 		.copyright a { color:<?php echo get_theme_mod( 'fs_footer_copyright_link' ); ?>; }
 		
 		.post-header h2 a, .post-header h1 { color:<?php echo get_theme_mod( 'fs_post_title' ); ?>; }
-		.title-divider { color:<?php echo get_theme_mod( 'fs_post_title_divider' ); ?>; }
 		.post-entry p { color:<?php echo get_theme_mod( 'fs_post_text' ); ?>; }
 		.post-entry h1, .post-entry h2, .post-entry h3, .post-entry h4, .post-entry h5, .post-entry h6 { color:<?php echo get_theme_mod( 'fs_post_h' ); ?>; }
 		.more-link { color:<?php echo get_theme_mod( 'fs_post_readmore_text' ); ?>; }

@@ -4,8 +4,6 @@
 		
 		<h1><?php the_title(); ?></h1>
 		
-		<span class="title-divider"></span>
-		
 	</div>
 	
 	<div class="post-img">
