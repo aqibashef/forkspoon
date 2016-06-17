@@ -33,7 +33,6 @@ class themewagon_about_widget extends WP_Widget {
 		$image = $instance['image'];
 		$subtitle = $instance['subtitle'];
 		$description = $instance['description'];
-		$signing = $instance['signing'];
 		
 		/* Before widget (defined by themes). */
 		echo $before_widget;
@@ -58,10 +57,6 @@ class themewagon_about_widget extends WP_Widget {
 				
 				<?php if($description) : ?>
 				<p><?php echo wp_kses_post($description); ?></p>
-				<?php endif; ?>
-				
-				<?php if($signing) : ?>
-				<span class="about-autograph"><img src="<?php echo esc_url($signing); ?>" alt="" /></span>
 				<?php endif; ?>
 				
 			</div>
@@ -117,12 +112,6 @@ class themewagon_about_widget extends WP_Widget {
 		<p>
 			<label for="<?php echo $this->get_field_id( 'description' ); ?>">About me text:</label>
 			<textarea id="<?php echo $this->get_field_id( 'description' ); ?>" name="<?php echo $this->get_field_name( 'description' ); ?>" style="width:95%;" rows="6"><?php echo $instance['description']; ?></textarea>
-		</p>
-		
-		<!-- autograph url -->
-		<p>
-			<label for="<?php echo $this->get_field_id( 'signing' ); ?>">Autograph Image URL:</label>
-			<input id="<?php echo $this->get_field_id( 'signing' ); ?>" name="<?php echo $this->get_field_name( 'signing' ); ?>" value="<?php echo $instance['signing']; ?>" style="width:96%;" /><br />
 		</p>
 
 

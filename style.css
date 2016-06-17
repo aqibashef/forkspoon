@@ -137,7 +137,7 @@ a {
     position: relative;
     top: 2px;
 }
-#nav-wrapper .menu li a:hover,ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â #nav-wrapper .menu li a:focus {
+#nav-wrapper .menu li a:hover,ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â #nav-wrapper .menu li a:focus {
 	color:#999;
 	outline: none;
 }
@@ -1007,6 +1007,19 @@ a.more-link:hover .more-line {
 	padding: 15px;
 }
 
+.widget_facebook_widget {
+    border: none;
+    padding: 0;
+}
+
+.widget_mc4wp_form_widget {
+    background: #f1f1f1;
+}
+
+.widget_mc4wp_form_widget .widget-title {
+    margin-bottom: 0;
+}
+
 .themewagon_facebook_widget {
     text-align: center;
 }
@@ -1021,31 +1034,17 @@ a.more-link:hover .more-line {
     padding: 0;
 }
 .widget-title {
-	background: #f1f1f1;
 	text-align:center;
 	color: #00243b;
 	padding:13px 0;
-	font-size:11px;
-	text-transform:uppercase;
+	font-size: 18px;
 	letter-spacing:1px;
 	position: relative;
 	font-weight: 700;
-	margin: -15px;
+	margin: -5px;
 	margin-bottom: 25px;
-}
-.widget-title:after {
-	content: "";
-	display: block;
-	position: absolute;
-	border-top: 5px solid;
-	border-top-color: #f1f1f1;
-	border-right: 5px solid transparent;
-	border-left: 5px solid transparent;
-	bottom: -5px;
-	left: 50%;
-	width: 0;
-	height: 0;
-	margin-left: -5px;
+	font-family: Function;
+	text-transform: uppercase;
 }
 .widget p {
 	font-size:13px;
@@ -1094,6 +1093,9 @@ a.more-link:hover .more-line {
 	text-transform:uppercase;
 	font-weight:700;
 	margin-bottom:10px;
+	font-family: Function;
+	letter-spacing: 1px;
+	font-size: 16px;
 }
 .about-autograph {
 	margin-top:14px;
@@ -1106,8 +1108,8 @@ a.more-link:hover .more-line {
 }
 .social-widget a {
 	color:#000;
-	font-size:16px;
-	margin:0 10px;
+	font-size: 22px;
+	padding: 6px;
 	-o-transition:.3s;
 	-ms-transition:.3s;
 	-moz-transition:.3s;
@@ -1188,7 +1190,7 @@ a.more-link:hover .more-line {
 /* Search Widget **********/
 #searchform input#s {
 	border: 1px solid #e5e5e5;
-	background:#fff url(img/searchsubmit.png) no-repeat 96% 13px;
+	background: #fff url(img/searchsubmit.png) no-repeat 96% 8px;
 	padding:14px 14px;
 	font-size:12px;
 	font-style:italic;
@@ -1261,12 +1263,15 @@ a.more-link:hover .more-line {
 }
 .widget ul.side-newsfeed li .side-item .side-item-text h4 {
 	margin-bottom:4px;
+	margin-top: 0;
 }
 .widget ul.side-newsfeed li .side-item .side-item-text h4 a {
 	margin-bottom:1px;
 	color:#242424;
 	display:block;
-	font-size:13px;
+	font-size: 15px;
+	line-height: 1.3em;
+	font-family: Function, sans-serif;
 }
 .widget ul.side-newsfeed li .side-item .side-item-text .side-item-meta {
 	font-size:12px;
@@ -1344,9 +1349,13 @@ a.more-link:hover .more-line {
 	font-size:14px;
 }
 #instagram-footer .instagram-pics li {
-	width:12.5%;
-	display:inline;
-	float:left;
+	width: 16.6666667%;
+	display: block;
+	float: left;
+}
+
+#instagram-footer .instagram-pics li > a {
+    display: block;
 }
 #instagram-footer .instagram-pics li img {
 	max-width:100%;
@@ -1669,7 +1678,7 @@ div.wpcf7 {
 
 .mc4wp-form {
 	margin:0 !important;
-	padding: 20px 20px 24px;
+	padding: 0;
 }
 
 /* Mailchimp comments */
