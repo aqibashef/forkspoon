@@ -6,8 +6,10 @@
 	</div>
 	
 	<div id="instagram-footer">
+		<div class="container">
 
 		<?php	/* Widgetised Area */	if ( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar('Instagram Footer') ) ?>
+		</div>
 		
 	</div>
 	
