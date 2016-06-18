@@ -137,7 +137,7 @@ a {
     position: relative;
     top: 2px;
 }
-#nav-wrapper .menu li a:hover,ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â #nav-wrapper .menu li a:focus {
+#nav-wrapper .menu li a:hover, #nav-wrapper .menu li a:focus {
 	color:#999;
 	outline: none;
 }
@@ -1207,7 +1207,10 @@ a.more-link:hover .more-line {
 /* Instagram Widget **********/
 .instagram-pics {
     padding: 0;
+    margin: 0;
 }
+
+.instagram-pics:after {content: " ";display: table;clear: both;}
 #sidebar .null-instagram-feed{
     padding-bottom: 0
 }
@@ -1341,6 +1344,7 @@ a.more-link:hover .more-line {
 #instagram-footer {
 	text-align:center;
 	overflow:hidden;
+	position: relative;
 }
 .instagram-title {
 	margin-bottom:20px;
@@ -1365,10 +1369,21 @@ a.more-link:hover .more-line {
 	opacity:.87;
 }
 #instagram-footer p.clear {
-	font-size: 11px;
-	border-bottom: 1px solid #eee;
-	display: inline-block;
-	margin-top: 5px;
+	font-size: 14px;
+	display: block;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin: -42px 0 0px -127px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background: rgb(255, 255, 255);
+	font-family: Function;
+}
+
+#instagram-footer p.clear > a {
+    padding: 30px 40px;
+    display: block;
 }
 
 /* Footer social icons **********/
