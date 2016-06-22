@@ -347,20 +347,6 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 	        )
 	    );
 		$wp_customize->add_setting(
-	        'fs_post_share_author',
-	        array(
-	            'default'     => false,
-	            'sanitize_callback' => 'esc_url_raw'
-	        )
-	    );
-	    $wp_customize->add_setting(
-	        'fs_post_share_author_avatar',
-	        array(
-	            'default'     => false,
-	            'sanitize_callback' => 'esc_url_raw'
-	        )
-	    );
-		$wp_customize->add_setting(
 	        'fs_post_thumb',
 	        array(
 	            'default'     => false,
@@ -620,7 +606,7 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 			$wp_customize->add_setting(
 				'fs_sidebar_title_bg',
 				array(
-					'default'     => '#161616',
+					'default'     => '#ffffff',
 					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
@@ -634,7 +620,7 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 			$wp_customize->add_setting(
 				'fs_sidebar_title_text',
 				array(
-					'default'     => '#ffffff',
+					'default'     => '#161616',
 					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
@@ -699,14 +685,14 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 			$wp_customize->add_setting(
 				'fs_footer_bg',
 				array(
-					'default'     => '#161616',
+					'default'     => '#ffffff',
 					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			$wp_customize->add_setting(
 				'fs_footer_social',
 				array(
-					'default'     => '#ffffff',
+					'default'     => '#000000',
 					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
@@ -1126,32 +1112,6 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 					'settings'   => 'fs_post_share',
 					'type'		 => 'checkbox',
 					'priority'	 => 5
-				)
-			)
-		);
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'post_share_author',
-				array(
-					'label'      => 'Hide Author Name',
-					'section'    => 'themewagon_new_section_post',
-					'settings'   => 'fs_post_share_author',
-					'type'		 => 'checkbox',
-					'priority'	 => 6
-				)
-			)
-		);
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'post_share_author_avatar',
-				array(
-					'label'      => 'Hide Author Avatar',
-					'section'    => 'themewagon_new_section_post',
-					'settings'   => 'fs_post_share_author_avatar',
-					'type'		 => 'checkbox',
-					'priority'	 => 7
 				)
 			)
 		);

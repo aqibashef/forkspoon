@@ -31,17 +31,19 @@
 							<?php include(locate_template('content-grid.php')); ?>
 						
 						<?php elseif(get_theme_mod('fs_home_layout') == 'list') : ?>
-						
-							<?php include(locate_template('content-list.php')); ?>
+							<div class="row">
+								<?php include(locate_template('content-list.php')); ?>
+							</div>
 							
 						<?php elseif(get_theme_mod('fs_home_layout') == 'full_list') : ?>
-						
+							<div class="row">
 							<?php if( $wp_query->current_post == 0 && !is_paged() ) : ?>
 								<?php include(locate_template('content.php')); ?>
 							<?php else : ?>
 								<?php include(locate_template('content-list.php')); ?>
 							<?php endif; ?>
-						
+							</div>
+
 						<?php elseif(get_theme_mod('fs_home_layout') == 'full_grid') : ?>
 						
 							<?php if( $wp_query->current_post == 0 && !is_paged() ) : ?>

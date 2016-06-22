@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class('col-md-12'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class("col-md-12"); ?>>
 					
 	<div class="post-header">
 		
@@ -104,6 +104,16 @@
 		
 		<?php wp_link_pages(); ?>
 		
+
+		<?php if(!get_theme_mod('fs_post_cat')) : ?>
+		<?php if(is_single()) : ?>
+			<div class="post-cats">
+				<?php the_category("&bull;",""); ?>
+			</div>
+		<?php endif; ?>	
+		<?php endif; ?>
+
+
 		<?php if(!get_theme_mod('fs_post_tags')) : ?>
 		<?php if(is_single()) : ?>
 		<?php if(has_tag()) : ?>

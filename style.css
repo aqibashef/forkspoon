@@ -47,6 +47,16 @@ h1, h2, h3, h4, h5, h6, .feat-more, .post-share .post-share-comments, .about-tit
 	font-family: 'Playfair Display', serif;
 }
 
+::-moz-selection {
+     background-color: #222;
+     color: #fff;
+}
+
+::selection {
+     background-color: #222;
+     color: #fff;
+}
+
 #nav-wrapper .menu li a, .post_info{
 	font-family: 'Function', sans-serif;	
 }
@@ -487,6 +497,10 @@ ul.sp-grid > li:nth-child(odd) {
 .post-entry {
     border-bottom: 2px solid #f9f9f9;
 }
+
+.list-item .post-entry {
+    border-bottom: none;
+}
 .post-img img {
 	vertical-align:middle;
 	max-width:100%;
@@ -711,7 +725,27 @@ a.more-link:hover .more-line {
 	color:#999;
 }
 
-/* Post tags **********/
+/* Post tags & categories **********/
+.post-cats .post-categories {
+    padding: 0;
+}
+
+.post-cats .post-categories li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.post-cats {
+    color: lightgray;
+    font-family: Function;
+}
+
+.post-cats a {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
 .post-tags {
 	margin-top:25px;
 	margin-bottom:-15px;
@@ -733,6 +767,7 @@ a.more-link:hover .more-line {
 	-moz-transition:.3s;
 	-webkit-transition:.3s;
 	transition:.3s;
+	font-family: Function;
 }
 .post-tags a:hover {
 	opacity:.7;

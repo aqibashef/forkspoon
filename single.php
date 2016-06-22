@@ -5,7 +5,8 @@
 		<div class="row">
 		
 			<div class="<?php if(get_theme_mod('fs_sidebar_post') == true) { ?>col-sm-12 fullwidth<?php } else {?> col-sm-8 <?php } ?>" >
-			
+				
+				<div class="row">
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 				
 					<?php get_template_part('content'); ?>
@@ -13,7 +14,7 @@
 				<?php endwhile; ?>
 				
 				<?php endif; ?>
-				
+				</div>
 			</div>
 
 			<?php if(get_theme_mod('fs_sidebar_post')) : else : ?>
