@@ -8,7 +8,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, right-sidebar, custom-colors, custom-menu, editor-style, featured-images, flexible-header,  post-formats, sticky-post, threaded-comments, translation-ready
 
 == Description ==
-YelloStone is crafted specially for bloggers in mind. Impress your readers and visitors with aesthetic design, nice typography and clean design. It has stunning sliders, promo boxes, advertisement widgets, color options and much more.
+Fork+Spoon is crafted specially for food bloggers in mind. Impress your readers and visitors with aesthetic design, nice typography and clean design. It has stunning sliders, advertisement widgets, color options and much more.
 
 * Mobile-first, Responsive Layout
 * Custom Colors

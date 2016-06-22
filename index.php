@@ -5,10 +5,6 @@
 		<?php if(get_theme_mod( 'fs_featured_slider' ) == true) : ?>
 			<?php include(locate_template('inc/featured/featured.php')); ?>
 		<?php endif; ?>
-	
-		<?php if(get_theme_mod( 'fs_promo' ) == true) : ?>
-			<?php include(locate_template('inc/promo/promo.php')); ?>
-		<?php endif; ?>
 		
 		<div class="row">
 			<div class="<?php

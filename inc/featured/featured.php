@@ -1,4 +1,4 @@
-<div class="featured-area <?php if(!get_theme_mod('fs_promo')) : ?>nopromo<?php endif; ?>">
+<div class="featured-area nopromo">
 			
 	<div class="sideslides">
 	
@@ -27,7 +27,6 @@
 				
 				<div class="feat-overlay">
 					<div class="feat-inner">
-						<span class="cat"><?php the_category(' '); ?></span>
 						<h2><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h2>
 						<a href="<?php echo get_permalink(); ?>" class="btn feat-more"><?php _e( 'Read More', 'forkspoon' ); ?></a>
 					</div>

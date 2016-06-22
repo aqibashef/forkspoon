@@ -7,7 +7,6 @@ function themewagon_customizer_css() {
     <style type="text/css">
 	
 		#logo { padding-top:<?php echo get_theme_mod( 'fs_header_padding_top' ); ?>px; padding-bottom:<?php echo get_theme_mod( 'fs_header_padding_bottom' ); ?>px; }
-		<?php if(get_theme_mod('fs_promo_border') == true) : ?>.promo-overlay { border:none; }<?php endif; ?>
 		
 		<?php if(get_theme_mod( 'fs_topbar_bg' )) : ?>.slicknav_menu { background:<?php echo get_theme_mod( 'fs_topbar_bg' ); ?>; }<?php endif; ?>
 		<?php if(get_theme_mod( 'fs_topbar_nav_color' )) : ?>#nav-wrapper .menu li a{ color:<?php echo get_theme_mod( 'fs_topbar_nav_color' ); ?>; }<?php endif; ?>

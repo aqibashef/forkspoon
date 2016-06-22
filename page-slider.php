@@ -1,6 +1,6 @@
 <?php
 
-	/* Template Name: Page w/ Slider & Promo Boxes */
+	/* Template Name: Page with slider */
 
 ?>
 <?php get_header(); ?>
@@ -10,8 +10,6 @@
 		<div id="content">
 		
 			<?php get_template_part('inc/featured/featured'); ?>
-			
-			<?php get_template_part('inc/promo/promo'); ?>
 		
 			<div class="row">
 		

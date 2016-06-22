@@ -82,12 +82,6 @@ function themewagon_register_theme_customizer( $wp_customize ) {
    		'priority'   => 96,
 	) );
 	
-	$wp_customize->add_section( 'themewagon_new_section_promo' , array(
-		'title'      => 'Promo Box Settings',
-		'description'=> '',
-		'priority'   => 95,
-	) );
-	
 	$wp_customize->add_section( 'themewagon_new_section_featured' , array(
 		'title'      => 'Featured Area Settings',
 		'description'=> '',
@@ -127,7 +121,7 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 	        'fs_home_layout',
 	        array(
 	            'default'     => 'full',
-	            'sanitize_callback' => 'esc_url_raw'
+	            'sanitize_callback' => 'sanitize_text_field'
 	        )
 	    );
 		
@@ -135,7 +129,7 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 	        'fs_archive_layout',
 	        array(
 	            'default'     => 'full',
-	            'sanitize_callback' => 'esc_url_raw'
+	            'sanitize_callback' => 'sanitize_text_field'
 	        )
 	    );
 		
@@ -143,7 +137,7 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 	        'fs_sidebar_homepage',
 	        array(
 	            'default'     => false,
-	            'sanitize_callback' => 'esc_url_raw'
+	            'sanitize_callback' => 'sanitize_text_field'
 	        )
 	    );
 		
@@ -151,21 +145,21 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 	        'fs_sidebar_post',
 	        array(
 	            'default'     => false,
-	            'sanitize_callback' => 'esc_url_raw'
+	            'sanitize_callback' => 'sanitize_text_field'
 	        )
 	    );
 		$wp_customize->add_setting(
 	        'fs_sidebar_archive',
 	        array(
 	            'default'     => false,
-	            'sanitize_callback' => 'esc_url_raw'
+	            'sanitize_callback' => 'sanitize_text_field'
 	        )
 	    );
 		$wp_customize->add_setting(
 	        'fs_post_summary',
 	        array(
 	            'default'     => 'full',
-	            'sanitize_callback' => 'esc_url_raw'
+	            'sanitize_callback' => 'sanitize_text_field'
 	        )
 	    );
 		
@@ -174,21 +168,21 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 	        'fs_logo',
 	        array(
 	            'default'     => '',
-	            'sanitize_callback' => 'esc_url_raw'
+	            'sanitize_callback' => 'sanitize_text_field'
 	        )
 	    );
 		$wp_customize->add_setting(
 	        'fs_header_padding_top',
 	        array(
 	            'default'     => '0',
-	            'sanitize_callback' => 'esc_url_raw'
+	            'sanitize_callback' => 'sanitize_text_field'
 	        )
 	    );
 		$wp_customize->add_setting(
 	        'fs_header_padding_bottom',
 	        array(
 	            'default'     => '0',
-	            'sanitize_callback' => 'esc_url_raw'
+	            'sanitize_callback' => 'sanitize_text_field'
 	        )
 	    );
 		
@@ -197,14 +191,14 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 	        'fs_topbar_social_check',
 	        array(
 	            'default'     => false,
-	            'sanitize_callback' => 'esc_url_raw'
+	            'sanitize_callback' => 'sanitize_text_field'
 	        )
 	    );
 		$wp_customize->add_setting(
 	        'fs_topbar_search_check',
 	        array(
 	            'default'     => false,
-	            'sanitize_callback' => 'esc_url_raw'
+	            'sanitize_callback' => 'sanitize_text_field'
 	        )
 	    );
 		
@@ -213,158 +207,80 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 	        'fs_featured_slider',
 	        array(
 	            'default'     => false,
-	            'sanitize_callback' => 'esc_url_raw'
+	            'sanitize_callback' => 'sanitize_text_field'
 	        )
 	    );
 		$wp_customize->add_setting(
 	        'fs_featured_cat',
 	        array(
 	        	'default' => '',
-	        	'sanitize_callback' => 'esc_url_raw'
+	        	'sanitize_callback' => 'sanitize_text_field'
 	        )
 	    );
 		$wp_customize->add_setting(
 	        'fs_featured_id',
 	        array(
 	            'default'     => '',
-	            'sanitize_callback' => 'esc_url_raw'
+	            'sanitize_callback' => 'sanitize_text_field'
 	        )
 	    );
 		$wp_customize->add_setting(
 	        'fs_featured_slider_slides',
 	        array(
 	            'default'     => '5',
-	            'sanitize_callback' => 'esc_url_raw'
+	            'sanitize_callback' => 'sanitize_text_field'
 	        )
 	    );
 		
-		// Promo Boxes
-		$wp_customize->add_setting(
-	        'fs_promo',
-	        array(
-	            'default'     => false,
-	            'sanitize_callback' => 'esc_url_raw'
-	        )
-	    );
-		$wp_customize->add_setting(
-	        'fs_promo1_title',
-	        array(
-	            'default'     => '',
-	            'sanitize_callback' => 'esc_url_raw'
-	        )
-	    );
-		$wp_customize->add_setting(
-	        'fs_promo1_image',
-	        array(
-	        	'default' => '',
-	        	'sanitize_callback' => 'esc_url_raw'
-	        )
-	    );
-		$wp_customize->add_setting(
-	        'fs_promo1_url',
-	        array(
-	            'default'     => '',
-	            'sanitize_callback' => 'esc_url_raw'
-	        )
-	    );
-		$wp_customize->add_setting(
-	        'fs_promo2_title',
-	        array(
-	            'default'     => '',
-	            'sanitize_callback' => 'esc_url_raw'
-	        )
-	    );
-		$wp_customize->add_setting(
-	        'fs_promo2_image',
-	        array(
-	        	'default' => '',
-	        	'sanitize_callback' => 'esc_url_raw'
-	        )
-	    );
-		$wp_customize->add_setting(
-	        'fs_promo2_url',
-	        array(
-	            'default'     => '',
-	            'sanitize_callback' => 'esc_url_raw'
-	        )
-	    );
-		$wp_customize->add_setting(
-	        'fs_promo3_title',
-	        array(
-	            'default'     => '',
-	            'sanitize_callback' => 'esc_url_raw'
-	        )
-	    );
-		$wp_customize->add_setting(
-	        'fs_promo3_image',
-	        array(
-	        	'default' => '',
-	        	'sanitize_callback' => 'esc_url_raw'
-	        )
-	    );
-		$wp_customize->add_setting(
-	        'fs_promo3_url',
-	        array(
-	            'default'     => '',
-	            'sanitize_callback' => 'esc_url_raw'
-	        )
-	    );
-		$wp_customize->add_setting(
-	        'fs_promo_border',
-	        array(
-	            'default'     => false,
-	            'sanitize_callback' => 'esc_url_raw'
-	        )
-	    );
 		
 		// Post Settings
 		$wp_customize->add_setting(
 	        'fs_post_tags',
 	        array(
 	            'default'     => false,
-	            'sanitize_callback' => 'esc_url_raw'
+	            'sanitize_callback' => 'sanitize_text_field'
 	        )
 	    );
 		$wp_customize->add_setting(
 	        'fs_post_author',
 	        array(
 	            'default'     => false,
-	            'sanitize_callback' => 'esc_url_raw'
+	            'sanitize_callback' => 'sanitize_text_field'
 	        )
 	    );
 		$wp_customize->add_setting(
 	        'fs_post_related',
 	        array(
 	            'default'     => false,
-	            'sanitize_callback' => 'esc_url_raw'
+	            'sanitize_callback' => 'sanitize_text_field'
 	        )
 	    );
 		$wp_customize->add_setting(
 	        'fs_post_share',
 	        array(
 	            'default'     => false,
-	            'sanitize_callback' => 'esc_url_raw'
+	            'sanitize_callback' => 'sanitize_text_field'
 	        )
 	    );
 		$wp_customize->add_setting(
 	        'fs_post_thumb',
 	        array(
 	            'default'     => false,
-	            'sanitize_callback' => 'esc_url_raw'
+	            'sanitize_callback' => 'sanitize_text_field'
 	        )
 	    );
 		$wp_customize->add_setting(
 	        'fs_post_date',
 	        array(
 	            'default'     => false,
-	            'sanitize_callback' => 'esc_url_raw'
+	            'sanitize_callback' => 'sanitize_text_field'
 	        )
 	    );
 		$wp_customize->add_setting(
 	        'fs_post_cat',
 	        array(
 	            'default'     => false,
-	            'sanitize_callback' => 'esc_url_raw'
+	            'sanitize_callback' => 'sanitize_text_field'
 	        )
 	    );
 		
@@ -373,7 +289,7 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 	        'fs_page_share',
 	        array(
 	            'default'     => false,
-	            'sanitize_callback' => 'esc_url_raw'
+	            'sanitize_callback' => 'sanitize_text_field'
 	        )
 	    );
 		
@@ -501,7 +417,7 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 				'fs_topbar_bg',
 				array(
 					'default'     => '#161616',
-					'sanitize_callback' => 'esc_url_raw'
+					'sanitize_callback' => 'sanitize_hex_color'
 				)
 			);
 
@@ -509,14 +425,14 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 				'fs_topbar_nav_color',
 				array(
 					'default'     => '#222',
-					'sanitize_callback' => 'esc_url_raw'
+					'sanitize_callback' => 'sanitize_hex_color'
 				)
 			);
 			$wp_customize->add_setting(
 				'fs_topbar_nav_color_hover',
 				array(
 					'default'     => '#999999',
-					'sanitize_callback' => 'esc_url_raw'
+					'sanitize_callback' => 'sanitize_hex_color'
 				)
 			);
 			
@@ -524,35 +440,35 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 				'fs_drop_bg',
 				array(
 					'default'     => '#ffffff',
-					'sanitize_callback' => 'esc_url_raw'
+					'sanitize_callback' => 'sanitize_hex_color'
 				)
 			);
 			$wp_customize->add_setting(
 				'fs_drop_border',
 				array(
 					'default'     => '#dadada',
-					'sanitize_callback' => 'esc_url_raw'
+					'sanitize_callback' => 'sanitize_hex_color'
 				)
 			);
 			$wp_customize->add_setting(
 				'fs_drop_text_color',
 				array(
 					'default'     => '#000',
-					'sanitize_callback' => 'esc_url_raw'
+					'sanitize_callback' => 'sanitize_hex_color'
 				)
 			);
 			$wp_customize->add_setting(
 				'fs_drop_text_hover_bg',
 				array(
 					'default'     => '#fff',
-					'sanitize_callback' => 'esc_url_raw'
+					'sanitize_callback' => 'sanitize_hex_color'
 				)
 			);
 			$wp_customize->add_setting(
 				'fs_drop_text_hover_color',
 				array(
 					'default'     => '#333',
-					'sanitize_callback' => 'esc_url_raw'
+					'sanitize_callback' => 'sanitize_hex_color'
 				)
 			);
 			
@@ -560,14 +476,14 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 				'fs_topbar_social_color',
 				array(
 					'default'     => '#161616',
-					'sanitize_callback' => 'esc_url_raw'
+					'sanitize_callback' => 'sanitize_hex_color'
 				)
 			);
 			$wp_customize->add_setting(
 				'fs_topbar_social_color_hover',
 				array(
 					'default'     => '#87b331',
-					'sanitize_callback' => 'esc_url_raw'
+					'sanitize_callback' => 'sanitize_hex_color'
 				)
 			);
 			
@@ -575,7 +491,7 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 				'fs_topbar_search_magnify',
 				array(
 					'default'     => '#888888',
-					'sanitize_callback' => 'esc_url_raw'
+					'sanitize_callback' => 'sanitize_hex_color'
 				)
 			);
 			
@@ -584,21 +500,21 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 				'fs_mobile_bg',
 				array(
 					'default'     => '#161616',
-					'sanitize_callback' => 'esc_url_raw'
+					'sanitize_callback' => 'sanitize_hex_color'
 				)
 			);
 			$wp_customize->add_setting(
 				'fs_mobile_text',
 				array(
 					'default'     => '#ffffff',
-					'sanitize_callback' => 'esc_url_raw'
+					'sanitize_callback' => 'sanitize_hex_color'
 				)
 			);
 			$wp_customize->add_setting(
 				'fs_mobile_icon',
 				array(
 					'default'     => '#ffffff',
-					'sanitize_callback' => 'esc_url_raw'
+					'sanitize_callback' => 'sanitize_hex_color'
 				)
 			);
 			
@@ -607,7 +523,7 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 				'fs_sidebar_title_bg',
 				array(
 					'default'     => '#ffffff',
-					'sanitize_callback' => 'esc_url_raw'
+					'sanitize_callback' => 'sanitize_hex_color'
 				)
 			);
 			$wp_customize->add_setting(
@@ -621,63 +537,63 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 				'fs_sidebar_title_text',
 				array(
 					'default'     => '#161616',
-					'sanitize_callback' => 'esc_url_raw'
+					'sanitize_callback' => 'sanitize_hex_color'
 				)
 			);
 			$wp_customize->add_setting(
 				'fs_sidebar_social_icon',
 				array(
 					'default'     => '#000000',
-					'sanitize_callback' => 'esc_url_raw'
+					'sanitize_callback' => 'sanitize_hex_color'
 				)
 			);
 			$wp_customize->add_setting(
 				'fs_sidebar_social_icon_hover',
 				array(
 					'default'     => '#87b331',
-					'sanitize_callback' => 'esc_url_raw'
+					'sanitize_callback' => 'sanitize_hex_color'
 				)
 			);
 			$wp_customize->add_setting(
 				'fs_sidebar_newsletter_bg',
 				array(
 					'default'     => '#f1f1f1',
-					'sanitize_callback' => 'esc_url_raw'
+					'sanitize_callback' => 'sanitize_hex_color'
 				)
 			);
 			$wp_customize->add_setting(
 				'fs_sidebar_newsletter_text',
 				array(
 					'default'     => '#444444',
-					'sanitize_callback' => 'esc_url_raw'
+					'sanitize_callback' => 'sanitize_hex_color'
 				)
 			);
 			$wp_customize->add_setting(
 				'fs_sidebar_newsletter_button_bg',
 				array(
 					'default'     => '#161616',
-					'sanitize_callback' => 'esc_url_raw'
+					'sanitize_callback' => 'sanitize_hex_color'
 				)
 			);
 			$wp_customize->add_setting(
 				'fs_sidebar_newsletter_button_text',
 				array(
 					'default'     => '#ffffff',
-					'sanitize_callback' => 'esc_url_raw'
+					'sanitize_callback' => 'sanitize_hex_color'
 				)
 			);
 			$wp_customize->add_setting(
 				'fs_sidebar_newsletter_button_bg_hover',
 				array(
 					'default'     => '#87b331',
-					'sanitize_callback' => 'esc_url_raw'
+					'sanitize_callback' => 'sanitize_hex_color'
 				)
 			);
 			$wp_customize->add_setting(
 				'fs_sidebar_newsletter_button_text_hover',
 				array(
 					'default'     => '#ffffff',
-					'sanitize_callback' => 'esc_url_raw'
+					'sanitize_callback' => 'sanitize_hex_color'
 				)
 			);
 			
@@ -686,42 +602,42 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 				'fs_footer_bg',
 				array(
 					'default'     => '#ffffff',
-					'sanitize_callback' => 'esc_url_raw'
+					'sanitize_callback' => 'sanitize_hex_color'
 				)
 			);
 			$wp_customize->add_setting(
 				'fs_footer_social',
 				array(
 					'default'     => '#000000',
-					'sanitize_callback' => 'esc_url_raw'
+					'sanitize_callback' => 'sanitize_hex_color'
 				)
 			);
 			$wp_customize->add_setting(
 				'fs_footer_social_hover',
 				array(
 					'default'     => '#87b331',
-					'sanitize_callback' => 'esc_url_raw'
+					'sanitize_callback' => 'sanitize_hex_color'
 				)
 			);
 			$wp_customize->add_setting(
 				'fs_footer_social_line',
 				array(
 					'default'     => '#313131',
-					'sanitize_callback' => 'esc_url_raw'
+					'sanitize_callback' => 'sanitize_hex_color'
 				)
 			);
 			$wp_customize->add_setting(
 				'fs_footer_copyright_color',
 				array(
 					'default'     => '#888888',
-					'sanitize_callback' => 'esc_url_raw'
+					'sanitize_callback' => 'sanitize_hex_color'
 				)
 			);
 			$wp_customize->add_setting(
 				'fs_footer_copyright_link',
 				array(
 					'default'     => '#ffffff',
-					'sanitize_callback' => 'esc_url_raw'
+					'sanitize_callback' => 'sanitize_hex_color'
 				)
 			);
 			
@@ -730,63 +646,63 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 				'fs_post_title',
 				array(
 					'default'     => '#000000',
-					'sanitize_callback' => 'esc_url_raw'
+					'sanitize_callback' => 'sanitize_hex_color'
 				)
 			);
 			$wp_customize->add_setting(
 				'fs_post_title_divider',
 				array(
 					'default'     => '#000000',
-					'sanitize_callback' => 'esc_url_raw'
+					'sanitize_callback' => 'sanitize_hex_color'
 				)
 			);
 			$wp_customize->add_setting(
 				'fs_post_text',
 				array(
 					'default'     => '#242424',
-					'sanitize_callback' => 'esc_url_raw'
+					'sanitize_callback' => 'sanitize_hex_color'
 				)
 			);
 			$wp_customize->add_setting(
 				'fs_post_h',
 				array(
 					'default'     => '#242424',
-					'sanitize_callback' => 'esc_url_raw'
+					'sanitize_callback' => 'sanitize_hex_color'
 				)
 			);
 			$wp_customize->add_setting(
 				'fs_post_readmore_text',
 				array(
 					'default'     => '#000000',
-					'sanitize_callback' => 'esc_url_raw'
+					'sanitize_callback' => 'sanitize_hex_color'
 				)
 			);
 			$wp_customize->add_setting(
 				'fs_post_readmore_text_hover',
 				array(
 					'default'     => '#87b331',
-					'sanitize_callback' => 'esc_url_raw'
+					'sanitize_callback' => 'sanitize_hex_color'
 				)
 			);
 			$wp_customize->add_setting(
 				'fs_post_readmore_line',
 				array(
 					'default'     => '#87b331',
-					'sanitize_callback' => 'esc_url_raw'
+					'sanitize_callback' => 'sanitize_hex_color'
 				)
 			);
 			$wp_customize->add_setting(
 				'fs_post_readmore_line_hover',
 				array(
 					'default'     => '#87b331',
-					'sanitize_callback' => 'esc_url_raw'
+					'sanitize_callback' => 'sanitize_hex_color'
 				)
 			);
 			$wp_customize->add_setting(
 				'fs_post_share_color_hover',
 				array(
 					'default'     => '#87b331',
-					'sanitize_callback' => 'esc_url_raw'
+					'sanitize_callback' => 'sanitize_hex_color'
 				)
 			);
 			
@@ -795,7 +711,7 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 				'fs_accent_color',
 				array(
 					'default'     => '#87b331',
-					'sanitize_callback' => 'esc_url_raw'
+					'sanitize_callback' => 'sanitize_hex_color'
 				)
 			);
 			
@@ -804,7 +720,7 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 				'fs_custom_css',
 				array(
 					'default' => '',
-					'sanitize_callback' == 'esc_url_raw'
+					'sanitize_callback' == ''
 				)
 			);
 		
